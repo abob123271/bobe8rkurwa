@@ -1,0 +1,18 @@
+1. git add .
+2. git commit -m "ваша приписка"
+3. ВОЗМОЖНО:
+    git config --global user.email "вашемыло@сгита.com"
+    git config --global user.name "ВашЛогинСГита"
+4. git push
+
+
+Как активировать venv:
+
+1. Открывайте командную строку (cmd.exe)
+2. Заходите через cd в папку с вашим ботом
+3. py -m venv venv
+4. venv\Scripts\activate
+5. должна появиться надпись (venv)
+6. pip install aiogram
+7. pip install python-dotenv
+8. запуск бота: py bot.py
