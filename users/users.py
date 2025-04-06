@@ -1,4 +1,5 @@
 import json
+import os
 
 class User:
     def __init__(self, first_name: str, last_name: str, 
@@ -28,3 +29,9 @@ class User:
             lang_code = data['lang_code']
             ip = data['ip']
             return User(first_name, last_name, username, user_id, lang_code, ip)
+        
+    @classmethod 
+    def check_if_user_existss(cls, user_id: int) -> bool:
+        file_name = f'{user_id}.json'
+        folder = 'users/configs'
+        return file_name in os.listdir(folder)
